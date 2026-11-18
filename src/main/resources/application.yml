@@ -1,0 +1,16 @@
+server:
+  port: 8086
+spring:
+  application:
+    name: order-service
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/order_test_db}
+    username: ${SPRING_DATASOURCE_USERNAME:test_user}
+    password: ${SPRING_DATASOURCE_PASSWORD:test_password}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
